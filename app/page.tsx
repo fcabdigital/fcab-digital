@@ -51,7 +51,7 @@ export default function Home() {
             We are <span className="gradient-text">FCAB Digital</span>
           </h1>
           <p className="text-xl md:text-2xl text-dark-200 mb-8 max-w-2xl mx-auto animate-slide-up" style={{ animationDelay: '0.1s' }}>
-            A digital marketing agency that will help you make money from your website.
+            A digital marketing agency that will help you make money from your online channels.
           </p>
           <Link
             href="/contact-us"
@@ -60,6 +60,30 @@ export default function Home() {
           >
             TALK TO US
           </Link>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-16 bg-dark-50">
+        <div className="container">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="text-center hover-lift">
+              <div className="text-5xl font-bold text-primary-500 mb-2">150+</div>
+              <p className="text-dark-600">Businesses Served</p>
+            </div>
+            <div className="text-center hover-lift">
+              <div className="text-5xl font-bold text-accent-500 mb-2">£10M+</div>
+              <p className="text-dark-600">Revenue Generated</p>
+            </div>
+            <div className="text-center hover-lift">
+              <div className="text-5xl font-bold text-primary-500 mb-2">156%</div>
+              <p className="text-dark-600">Avg. ROI Increase</p>
+            </div>
+            <div className="text-center hover-lift">
+              <div className="text-5xl font-bold text-accent-500 mb-2">98%</div>
+              <p className="text-dark-600">Client Retention</p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -116,18 +140,60 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Process Section */}
+      <section className="py-20 bg-white">
+        <div className="container">
+          <h2 className="text-4xl font-bold text-center mb-16">Our Process</h2>
+          <div className="max-w-5xl mx-auto">
+            <div className="hidden md:flex justify-between items-start mb-12">
+              {[
+                { num: '1', title: 'Discovery', desc: 'Audit your current situation and understand your goals.' },
+                { num: '2', title: 'Strategy', desc: 'Develop a custom plan tailored to your business.' },
+                { num: '3', title: 'Execution', desc: 'Implement across all channels with expert management.' },
+                { num: '4', title: 'Growth', desc: 'Monitor, optimize, and help you grow consistently.' },
+              ].map((step, i) => (
+                <div key={i} className="flex-1 relative text-center">
+                  <div className="flex justify-center mb-6">
+                    <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 text-white flex items-center justify-center text-3xl font-bold relative z-10">{step.num}</div>
+                  </div>
+                  <h3 className="text-lg font-bold mb-3">{step.title}</h3>
+                  <p className="text-dark-600 text-sm leading-relaxed">{step.desc}</p>
+                  {i < 3 && (
+                    <div className="absolute top-10 left-1/2 w-full h-1 bg-gradient-to-r from-primary-300 to-accent-300" style={{ left: 'calc(50% + 40px)', width: 'calc(100% - 80px)' }}></div>
+                  )}
+                </div>
+              ))}
+            </div>
+
+            <div className="md:hidden space-y-8">
+              {[
+                { num: '1', title: 'Discovery', desc: 'Audit your current situation and understand your goals.' },
+                { num: '2', title: 'Strategy', desc: 'Develop a custom plan tailored to your business.' },
+                { num: '3', title: 'Execution', desc: 'Implement across all channels with expert management.' },
+                { num: '4', title: 'Growth', desc: 'Monitor, optimize, and help you grow consistently.' },
+              ].map((step, i) => (
+                <div key={i} className="flex gap-6">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 text-white flex items-center justify-center text-2xl font-bold flex-shrink-0">{step.num}</div>
+                  <div>
+                    <h3 className="text-lg font-bold mb-2">{step.title}</h3>
+                    <p className="text-dark-600 text-sm">{step.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-primary-500 to-accent-500 text-white">
         <div className="container text-center">
-          <h2 className="text-4xl font-bold mb-6">We Don't Just Talk The Talk</h2>
-          <p className="text-xl mb-4 text-white/90 max-w-2xl mx-auto">
-            If your website isn't making you money, it is costing you money.
-          </p>
-          <p className="text-lg mb-8 text-white/80 max-w-2xl mx-auto">
-            By working with us, you are partnering with people who know how to boost website traffic, increase sales, and save time.
+          <h2 className="text-4xl font-bold mb-6">We Help You Make Money From Online Channels</h2>
+          <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
+            SEO gets you found. Ads drive traffic. Design converts. CRM closes deals.
           </p>
           <Link href="/contact-us" className="btn bg-white text-primary-500 hover:bg-dark-100 text-lg inline-block hover-lift">
-            Let's Talk
+            Let's Talk Strategy
           </Link>
         </div>
       </section>
