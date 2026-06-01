@@ -1,14 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  trailingSlash: true,
   images: {
     unoptimized: true,
     domains: ['fcabdigital.com'],
   },
   reactStrictMode: true,
   swcMinify: true,
-  experimental: {
-    appDir: true,
-  },
 };
 
 module.exports = nextConfig;
