@@ -115,14 +115,14 @@ export default function SurreyPage() {
       <section className="py-20 bg-dark-50">
         <div className="container">
           <h2 className="text-4xl font-bold text-center mb-16">We Serve All of {county}</h2>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
             {towns.map((town) => (
               <Link
                 key={town}
                 href={`/digital-marketing-agency-${county.toLowerCase()}/${town.toLowerCase()}/`}
-                className="p-4 bg-white rounded-lg border border-dark-200 hover:border-primary-500 hover:bg-primary-50 text-center hover-lift transition-all"
+                className="p-3 sm:p-4 bg-white rounded-lg border border-dark-200 hover:border-primary-500 hover:bg-primary-50 text-center hover-lift transition-all min-h-[80px] flex flex-col justify-center"
               >
-                <h3 className="font-bold text-dark-900 hover:text-primary-600">{town}</h3>
+                <h3 className="font-bold text-dark-900 hover:text-primary-600 text-sm sm:text-base break-words">{town}</h3>
                 <p className="text-xs text-dark-500">{county}</p>
               </Link>
             ))}
