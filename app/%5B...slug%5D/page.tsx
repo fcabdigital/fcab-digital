@@ -140,33 +140,65 @@ export default function DynamicPage({ params }: { params: { slug: string[] } }) 
     <h2>Digital Marketing Services in ${locationData.region}</h2>
     <p>${locationData.description}</p>
 
-    <h3>Local Expertise, Proven Results</h3>
-    <p>We understand the unique challenges and opportunities facing businesses in ${locationData.region}. With years of experience serving the local market, we know what works.</p>
-
-    <h3>Our Services</h3>
+    <h3>Why Local Digital Marketing Matters</h3>
+    <p>Businesses in ${locationData.region} face unique challenges and opportunities. Your customers are searching online. Your competitors are bidding on ads. The question is: are you visible when they search?</p>
+    <p>We help ${locationData.region} businesses:</p>
     <ul>
-      <li>SEO & Organic Search</li>
-      <li>Google Ads & PPC</li>
-      <li>Web Design & Development</li>
-      <li>CRM Implementation</li>
+      <li>Get found in Google search results and Google Maps</li>
+      <li>Generate leads and sales through targeted ads</li>
+      <li>Build modern, fast websites that convert</li>
+      <li>Organize and nurture customer relationships</li>
     </ul>
 
-    <h3>Why Choose FCAB Digital?</h3>
-    <p>We're not just another digital agency. We're local, we're experienced, and we're committed to delivering real results for your business.</p>
+    <h3>Our Complete Service Offering</h3>
+    <ul>
+      <li><strong>SEO &amp; Organic Search:</strong> Rank higher in Google and drive qualified traffic</li>
+      <li><strong>Google Ads &amp; PPC:</strong> Generate immediate leads with targeted paid campaigns</li>
+      <li><strong>Local SEO:</strong> Dominate local search and Google Maps in ${locationData.region}</li>
+      <li><strong>Web Design:</strong> Modern, conversion-focused websites that represent your business</li>
+      <li><strong>CRM Implementation:</strong> Organize customer relationships and automate sales processes</li>
+    </ul>
+
+    <h3>Local Expertise You Can Trust</h3>
+    <p>We're not a massive agency with cookie-cutter solutions. We understand the ${locationData.region} market. We know your competition. We know what works locally because we've helped dozens of businesses in your area succeed.</p>
+
+    <h3>Our Approach</h3>
+    <p><strong>1. Discovery:</strong> We audit your current online presence and understand your business goals.</p>
+    <p><strong>2. Strategy:</strong> We develop a custom digital marketing strategy tailored to your local market.</p>
+    <p><strong>3. Execution:</strong> We implement across all channels—SEO, ads, website, CRM.</p>
+    <p><strong>4. Growth:</strong> We monitor, optimize, and help you grow month after month.</p>
+
+    <h3>Ready to Grow Your Business in ${locationData.region}?</h3>
+    <p>We work with businesses of all sizes, from startups to established companies. Whether you need SEO, ads, a new website, or a complete digital marketing overhaul, we can help.</p>
   `;
 
+  const benefits = [
+    {
+      icon: '📍',
+      title: 'Local Expertise',
+      description: `We know the ${locationData.region} market and what works for local businesses.`,
+    },
+    {
+      icon: '📈',
+      title: 'Proven Results',
+      description: `Dozens of ${locationData.region} businesses have grown with our help.`,
+    },
+    {
+      icon: '💡',
+      title: 'Strategic Approach',
+      description: 'We build custom strategies aligned with your business goals.',
+    },
+  ];
+
   return (
-    <PageTemplate title={locationData.title} content={content}>
-      <div className="mt-12 p-8 bg-primary-50 rounded-lg hover-lift">
-        <h3 className="text-2xl font-bold mb-4">Ready to Grow in ${locationData.region}?</h3>
-        <p className="text-dark-600 mb-6">
-          Let's discuss how we can help your business thrive.
-        </p>
-        <Link href="/contact-us" className="btn btn-primary inline-block">
-          Get in Touch
-        </Link>
-      </div>
-    </PageTemplate>
+    <PageTemplate
+      title={locationData.title}
+      description={`Helping ${locationData.region} businesses grow online with proven digital marketing strategies`}
+      content={content}
+      benefits={benefits}
+      ctaText={`Get Your Free ${locationData.region} Digital Marketing Audit`}
+      ctaHref="/contact-us"
+    />
   );
 }
 
