@@ -53,8 +53,8 @@ export default function GoogleAdsPage() {
               <p className="text-dark-600 mb-4">Target high-intent keywords and appear at the top of Google search results when people are actively searching for your services.</p>
               <ul className="space-y-2 text-sm">
                 <li className="flex items-start gap-2"><span className="text-primary-500 font-bold">✓</span> <span>Keyword research &amp; bidding strategy</span></li>
-                <li className="flex items-start gap-2"><span className="text-primary-500 font-bold">✓</span> <span>Ad copy optimization</span></li>
-                <li className="flex items-start gap-2"><span className="text-primary-500 font-bold">✓</span> <span>Landing page optimization</span></li>
+                <li className="flex items-start gap-2"><span className="text-primary-500 font-bold">✓</span> <span>Ad copy optimisation</span></li>
+                <li className="flex items-start gap-2"><span className="text-primary-500 font-bold">✓</span> <span>Landing page optimisation</span></li>
               </ul>
             </div>
 
@@ -72,8 +72,8 @@ export default function GoogleAdsPage() {
               <h3 className="text-2xl font-bold mb-4">Shopping Ads</h3>
               <p className="text-dark-600 mb-4">Showcase your products directly in Google search results with rich images, prices, and reviews.</p>
               <ul className="space-y-2 text-sm">
-                <li className="flex items-start gap-2"><span className="text-primary-500 font-bold">✓</span> <span>Product feed optimization</span></li>
-                <li className="flex items-start gap-2"><span className="text-primary-500 font-bold">✓</span> <span>Bid strategy optimization</span></li>
+                <li className="flex items-start gap-2"><span className="text-primary-500 font-bold">✓</span> <span>Product feed optimisation</span></li>
+                <li className="flex items-start gap-2"><span className="text-primary-500 font-bold">✓</span> <span>Bid strategy optimisation</span></li>
                 <li className="flex items-start gap-2"><span className="text-primary-500 font-bold">✓</span> <span>Inventory sync management</span></li>
               </ul>
             </div>
@@ -100,8 +100,8 @@ export default function GoogleAdsPage() {
               {[
                 { num: '1', title: 'Audit', desc: 'Review your current campaigns and identify gaps, wasted spend, and opportunities.' },
                 { num: '2', title: 'Strategy', desc: 'Design a campaign roadmap focused on your business goals and target audience.' },
-                { num: '3', title: 'Execution', desc: 'Build and launch optimized campaigns across search, display, and video channels.' },
-                { num: '4', title: 'Optimization', desc: 'Continuously test, refine, and improve to maximize ROI and reduce cost per lead.' },
+                { num: '3', title: 'Execution', desc: 'Build and launch optimised campaigns across search, display, and video channels.' },
+                { num: '4', title: 'Optimisation', desc: 'Continuously test, refine, and improve to maximize ROI and reduce cost per lead.' },
               ].map((step, i) => (
                 <div key={i} className="flex-1 relative text-center">
                   <div className="flex justify-center mb-6">
@@ -120,8 +120,8 @@ export default function GoogleAdsPage() {
               {[
                 { num: '1', title: 'Audit', desc: 'Review your current campaigns and identify gaps, wasted spend, and opportunities.' },
                 { num: '2', title: 'Strategy', desc: 'Design a campaign roadmap focused on your business goals and target audience.' },
-                { num: '3', title: 'Execution', desc: 'Build and launch optimized campaigns across search, display, and video channels.' },
-                { num: '4', title: 'Optimization', desc: 'Continuously test, refine, and improve to maximize ROI and reduce cost per lead.' },
+                { num: '3', title: 'Execution', desc: 'Build and launch optimised campaigns across search, display, and video channels.' },
+                { num: '4', title: 'Optimisation', desc: 'Continuously test, refine, and improve to maximize ROI and reduce cost per lead.' },
               ].map((step, i) => (
                 <div key={i} className="flex gap-6">
                   <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 text-white flex items-center justify-center text-2xl font-bold flex-shrink-0">{step.num}</div>

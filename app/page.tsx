@@ -150,7 +150,7 @@ export default function Home() {
                 { num: '1', title: 'Discovery', desc: 'Audit your current situation and understand your goals.' },
                 { num: '2', title: 'Strategy', desc: 'Develop a custom plan tailored to your business.' },
                 { num: '3', title: 'Execution', desc: 'Implement across all channels with expert management.' },
-                { num: '4', title: 'Growth', desc: 'Monitor, optimize, and help you grow consistently.' },
+                { num: '4', title: 'Growth', desc: 'Monitor, optimise, and help you grow consistently.' },
               ].map((step, i) => (
                 <div key={i} className="flex-1 relative text-center">
                   <div className="flex justify-center mb-6">
@@ -170,7 +170,7 @@ export default function Home() {
                 { num: '1', title: 'Discovery', desc: 'Audit your current situation and understand your goals.' },
                 { num: '2', title: 'Strategy', desc: 'Develop a custom plan tailored to your business.' },
                 { num: '3', title: 'Execution', desc: 'Implement across all channels with expert management.' },
-                { num: '4', title: 'Growth', desc: 'Monitor, optimize, and help you grow consistently.' },
+                { num: '4', title: 'Growth', desc: 'Monitor, optimise, and help you grow consistently.' },
               ].map((step, i) => (
                 <div key={i} className="flex gap-6">
                   <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 text-white flex items-center justify-center text-2xl font-bold flex-shrink-0">{step.num}</div>

@@ -59,7 +59,7 @@ export default function WebDesignPage() {
             </div>
 
             <div className="p-8 bg-accent-50 rounded-lg border border-accent-200 hover-lift">
-              <h3 className="text-2xl font-bold mb-4">Conversion Optimization</h3>
+              <h3 className="text-2xl font-bold mb-4">Conversion Optimisation</h3>
               <p className="text-dark-600 mb-4">Every design element is strategically placed to guide visitors toward taking action.</p>
               <ul className="space-y-2 text-sm">
                 <li className="flex items-start gap-2"><span className="text-accent-500 font-bold">✓</span> <span>UX/UI best practices</span></li>
@@ -72,7 +72,7 @@ export default function WebDesignPage() {
               <h3 className="text-2xl font-bold mb-4">Performance &amp; Speed</h3>
               <p className="text-dark-600 mb-4">Lightning-fast load times that keep visitors engaged and improve SEO rankings.</p>
               <ul className="space-y-2 text-sm">
-                <li className="flex items-start gap-2"><span className="text-primary-500 font-bold">✓</span> <span>Code optimization</span></li>
+                <li className="flex items-start gap-2"><span className="text-primary-500 font-bold">✓</span> <span>Code optimisation</span></li>
                 <li className="flex items-start gap-2"><span className="text-primary-500 font-bold">✓</span> <span>Image compression</span></li>
                 <li className="flex items-start gap-2"><span className="text-primary-500 font-bold">✓</span> <span>Core Web Vitals</span></li>
               </ul>
@@ -100,8 +100,8 @@ export default function WebDesignPage() {
               {[
                 { num: '1', title: 'Discovery', desc: 'Understand your business, goals, and audience to inform the design.' },
                 { num: '2', title: 'Design', desc: 'Create wireframes, mockups, and prototypes that showcase your vision.' },
-                { num: '3', title: 'Development', desc: 'Build a fast, secure, SEO-optimized site using modern technology.' },
-                { num: '4', title: 'Launch & Support', desc: 'Deploy your site and provide ongoing optimization and support.' },
+                { num: '3', title: 'Development', desc: 'Build a fast, secure, SEO-optimised site using modern technology.' },
+                { num: '4', title: 'Launch & Support', desc: 'Deploy your site and provide ongoing optimisation and support.' },
               ].map((step, i) => (
                 <div key={i} className="flex-1 relative text-center">
                   <div className="flex justify-center mb-6">
@@ -120,8 +120,8 @@ export default function WebDesignPage() {
               {[
                 { num: '1', title: 'Discovery', desc: 'Understand your business, goals, and audience to inform the design.' },
                 { num: '2', title: 'Design', desc: 'Create wireframes, mockups, and prototypes that showcase your vision.' },
-                { num: '3', title: 'Development', desc: 'Build a fast, secure, SEO-optimized site using modern technology.' },
-                { num: '4', title: 'Launch & Support', desc: 'Deploy your site and provide ongoing optimization and support.' },
+                { num: '3', title: 'Development', desc: 'Build a fast, secure, SEO-optimised site using modern technology.' },
+                { num: '4', title: 'Launch & Support', desc: 'Deploy your site and provide ongoing optimisation and support.' },
               ].map((step, i) => (
                 <div key={i} className="flex gap-6">
                   <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 text-white flex items-center justify-center text-2xl font-bold flex-shrink-0">{step.num}</div>

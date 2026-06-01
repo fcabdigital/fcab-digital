@@ -45,7 +45,7 @@ export default function CRMPage() {
       <section className="py-20 bg-white">
         <div className="container">
           <h2 className="text-4xl font-bold mb-4">CRM Services for Growing Businesses</h2>
-          <p className="text-dark-600 mb-12 max-w-2xl">Customer Relationship Management systems help you organize, track, and nurture customer interactions. We help implement and optimize CRM systems to drive sales and customer retention.</p>
+          <p className="text-dark-600 mb-12 max-w-2xl">Customer Relationship Management systems help you organize, track, and nurture customer interactions. We help implement and optimise CRM systems to drive sales and customer retention.</p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="p-8 bg-primary-50 rounded-lg border border-primary-200 hover-lift">
@@ -62,7 +62,7 @@ export default function CRMPage() {
               <h3 className="text-2xl font-bold mb-4">Sales Automation</h3>
               <p className="text-dark-600 mb-4">Streamline your sales process with automated workflows that save time and improve conversion rates.</p>
               <ul className="space-y-2 text-sm">
-                <li className="flex items-start gap-2"><span className="text-accent-500 font-bold">✓</span> <span>Pipeline optimization</span></li>
+                <li className="flex items-start gap-2"><span className="text-accent-500 font-bold">✓</span> <span>Pipeline optimisation</span></li>
                 <li className="flex items-start gap-2"><span className="text-accent-500 font-bold">✓</span> <span>Automated lead nurturing</span></li>
                 <li className="flex items-start gap-2"><span className="text-accent-500 font-bold">✓</span> <span>Sales cycle visibility</span></li>
               </ul>
@@ -84,7 +84,7 @@ export default function CRMPage() {
               <ul className="space-y-2 text-sm">
                 <li className="flex items-start gap-2"><span className="text-accent-500 font-bold">✓</span> <span>Team training sessions</span></li>
                 <li className="flex items-start gap-2"><span className="text-accent-500 font-bold">✓</span> <span>Documentation &amp; guides</span></li>
-                <li className="flex items-start gap-2"><span className="text-accent-500 font-bold">✓</span> <span>Ongoing optimization</span></li>
+                <li className="flex items-start gap-2"><span className="text-accent-500 font-bold">✓</span> <span>Ongoing optimisation</span></li>
               </ul>
             </div>
           </div>
@@ -141,7 +141,7 @@ export default function CRMPage() {
         <div className="container text-center max-w-2xl">
           <h2 className="text-4xl font-bold mb-6">Implement Your CRM Today</h2>
           <p className="text-xl text-white/90 mb-8">
-            Let's guide you through setup and optimization to maximize your CRM's value and streamline your sales process.
+            Let's guide you through setup and optimisation to maximize your CRM's value and streamline your sales process.
           </p>
           <Link href="/contact-us" className="btn bg-white text-primary-500 hover:bg-dark-100 text-lg inline-block hover-lift">
             Schedule a CRM Consultation

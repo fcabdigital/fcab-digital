@@ -166,7 +166,7 @@ export default function DynamicPage({ params }: { params: { slug: string[] } }) 
     <p><strong>1. Discovery:</strong> We audit your current online presence and understand your business goals.</p>
     <p><strong>2. Strategy:</strong> We develop a custom digital marketing strategy tailored to your local market.</p>
     <p><strong>3. Execution:</strong> We implement across all channels—SEO, ads, website, CRM.</p>
-    <p><strong>4. Growth:</strong> We monitor, optimize, and help you grow month after month.</p>
+    <p><strong>4. Growth:</strong> We monitor, optimise, and help you grow month after month.</p>
 
     <h3>Ready to Grow Your Business in ${locationData.region}?</h3>
     <p>We work with businesses of all sizes, from startups to established companies. Whether you need SEO, ads, a new website, or a complete digital marketing overhaul, we can help.</p>

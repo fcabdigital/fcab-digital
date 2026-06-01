@@ -45,26 +45,26 @@ export default function SEOPage() {
       <section className="py-20 bg-white">
         <div className="container">
           <h2 className="text-4xl font-bold mb-4">SEO Services That Drive Results</h2>
-          <p className="text-dark-600 mb-12 max-w-2xl">Search Engine Optimization is the foundation of digital visibility. We help businesses improve their organic search rankings and drive qualified traffic to their websites.</p>
+          <p className="text-dark-600 mb-12 max-w-2xl">Search Engine Optimisation is the foundation of digital visibility. We help businesses improve their organic search rankings and drive qualified traffic to their websites.</p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="p-8 bg-primary-50 rounded-lg border border-primary-200 hover-lift">
               <h3 className="text-2xl font-bold mb-4">Technical SEO</h3>
-              <p className="text-dark-600 mb-4">Fix site structure, speed, indexing issues, and mobile optimization to ensure search engines can crawl and rank your site.</p>
+              <p className="text-dark-600 mb-4">Fix site structure, speed, indexing issues, and mobile optimisation to ensure search engines can crawl and rank your site.</p>
               <ul className="space-y-2 text-sm">
                 <li className="flex items-start gap-2"><span className="text-primary-500 font-bold">✓</span> <span>Site audits &amp; crawl analysis</span></li>
-                <li className="flex items-start gap-2"><span className="text-primary-500 font-bold">✓</span> <span>Core Web Vitals optimization</span></li>
+                <li className="flex items-start gap-2"><span className="text-primary-500 font-bold">✓</span> <span>Core Web Vitals optimisation</span></li>
                 <li className="flex items-start gap-2"><span className="text-primary-500 font-bold">✓</span> <span>XML sitemaps &amp; robots.txt</span></li>
               </ul>
             </div>
 
             <div className="p-8 bg-accent-50 rounded-lg border border-accent-200 hover-lift">
-              <h3 className="text-2xl font-bold mb-4">On-Page Optimization</h3>
-              <p className="text-dark-600 mb-4">Optimize your content, metadata, and page structure to improve rankings for your target keywords.</p>
+              <h3 className="text-2xl font-bold mb-4">On-Page Optimisation</h3>
+              <p className="text-dark-600 mb-4">Optimise your content, metadata, and page structure to improve rankings for your target keywords.</p>
               <ul className="space-y-2 text-sm">
                 <li className="flex items-start gap-2"><span className="text-accent-500 font-bold">✓</span> <span>Keyword research &amp; targeting</span></li>
-                <li className="flex items-start gap-2"><span className="text-accent-500 font-bold">✓</span> <span>Content optimization</span></li>
-                <li className="flex items-start gap-2"><span className="text-accent-500 font-bold">✓</span> <span>Title &amp; meta tag optimization</span></li>
+                <li className="flex items-start gap-2"><span className="text-accent-500 font-bold">✓</span> <span>Content optimisation</span></li>
+                <li className="flex items-start gap-2"><span className="text-accent-500 font-bold">✓</span> <span>Title &amp; meta tag optimisation</span></li>
               </ul>
             </div>
 
@@ -80,10 +80,10 @@ export default function SEOPage() {
 
             <div className="p-8 bg-accent-50 rounded-lg border border-accent-200 hover-lift">
               <h3 className="text-2xl font-bold mb-4">Link Building &amp; Local SEO</h3>
-              <p className="text-dark-600 mb-4">Build authority through earned links and dominate local search results with optimized local profiles.</p>
+              <p className="text-dark-600 mb-4">Build authority through earned links and dominate local search results with optimised local profiles.</p>
               <ul className="space-y-2 text-sm">
                 <li className="flex items-start gap-2"><span className="text-accent-500 font-bold">✓</span> <span>Backlink strategy</span></li>
-                <li className="flex items-start gap-2"><span className="text-accent-500 font-bold">✓</span> <span>Google Business Profile optimization</span></li>
+                <li className="flex items-start gap-2"><span className="text-accent-500 font-bold">✓</span> <span>Google Business Profile optimisation</span></li>
                 <li className="flex items-start gap-2"><span className="text-accent-500 font-bold">✓</span> <span>Local citation building</span></li>
               </ul>
             </div>
@@ -100,7 +100,7 @@ export default function SEOPage() {
               {[
                 { num: '1', title: 'Audit', desc: 'Deep dive into your current SEO performance and identify opportunities.' },
                 { num: '2', title: 'Strategy', desc: 'Build a roadmap focused on your most valuable keywords and opportunities.' },
-                { num: '3', title: 'Execution', desc: 'Optimize on-page, technical, and content factors for ranking improvement.' },
+                { num: '3', title: 'Execution', desc: 'Optimise on-page, technical, and content factors for ranking improvement.' },
                 { num: '4', title: 'Growth', desc: 'Monitor rankings, track traffic, and continuously refine your strategy.' },
               ].map((step, i) => (
                 <div key={i} className="flex-1 relative text-center">
@@ -120,7 +120,7 @@ export default function SEOPage() {
               {[
                 { num: '1', title: 'Audit', desc: 'Deep dive into your current SEO performance and identify opportunities.' },
                 { num: '2', title: 'Strategy', desc: 'Build a roadmap focused on your most valuable keywords and opportunities.' },
-                { num: '3', title: 'Execution', desc: 'Optimize on-page, technical, and content factors for ranking improvement.' },
+                { num: '3', title: 'Execution', desc: 'Optimise on-page, technical, and content factors for ranking improvement.' },
                 { num: '4', title: 'Growth', desc: 'Monitor rankings, track traffic, and continuously refine your strategy.' },
               ].map((step, i) => (
                 <div key={i} className="flex gap-6">

@@ -69,7 +69,7 @@ export default function SurreyPage() {
               <h3 className="text-2xl font-bold mb-3">SEO & Organic Search</h3>
               <p className="text-dark-600 mb-4">Rank higher in Google and get discovered by customers actively searching for your services in {county}.</p>
               <ul className="space-y-2 text-sm">
-                <li className="flex items-start gap-2"><span className="text-primary-500 font-bold">✓</span> <span>Local SEO optimization</span></li>
+                <li className="flex items-start gap-2"><span className="text-primary-500 font-bold">✓</span> <span>Local SEO optimisation</span></li>
                 <li className="flex items-start gap-2"><span className="text-primary-500 font-bold">✓</span> <span>Technical SEO fixes</span></li>
                 <li className="flex items-start gap-2"><span className="text-primary-500 font-bold">✓</span> <span>Content strategy</span></li>
               </ul>
@@ -80,7 +80,7 @@ export default function SurreyPage() {
               <h3 className="text-2xl font-bold mb-3">Google Ads & PPC</h3>
               <p className="text-dark-600 mb-4">Get immediate visibility and drive qualified leads with expertly managed Google Ads campaigns.</p>
               <ul className="space-y-2 text-sm">
-                <li className="flex items-start gap-2"><span className="text-accent-500 font-bold">✓</span> <span>Campaign setup & optimization</span></li>
+                <li className="flex items-start gap-2"><span className="text-accent-500 font-bold">✓</span> <span>Campaign setup & optimisation</span></li>
                 <li className="flex items-start gap-2"><span className="text-accent-500 font-bold">✓</span> <span>ROI-focused management</span></li>
                 <li className="flex items-start gap-2"><span className="text-accent-500 font-bold">✓</span> <span>A/B testing</span></li>
               </ul>
@@ -93,7 +93,7 @@ export default function SurreyPage() {
               <ul className="space-y-2 text-sm">
                 <li className="flex items-start gap-2"><span className="text-primary-500 font-bold">✓</span> <span>Responsive design</span></li>
                 <li className="flex items-start gap-2"><span className="text-primary-500 font-bold">✓</span> <span>Lightning-fast performance</span></li>
-                <li className="flex items-start gap-2"><span className="text-primary-500 font-bold">✓</span> <span>Conversion optimization</span></li>
+                <li className="flex items-start gap-2"><span className="text-primary-500 font-bold">✓</span> <span>Conversion optimisation</span></li>
               </ul>
             </div>
 
@@ -164,7 +164,7 @@ export default function SurreyPage() {
                 { num: '1', title: 'Discovery', desc: 'Audit your current situation and understand your goals.' },
                 { num: '2', title: 'Strategy', desc: `Develop a custom plan tailored to your ${county} market.` },
                 { num: '3', title: 'Execution', desc: 'Implement across all channels with expert management.' },
-                { num: '4', title: 'Growth', desc: 'Monitor, optimize, and help you grow consistently.' },
+                { num: '4', title: 'Growth', desc: 'Monitor, optimise, and help you grow consistently.' },
               ].map((step, i) => (
                 <div key={i} className="flex-1 relative text-center">
                   <div className="flex justify-center mb-6">
@@ -184,7 +184,7 @@ export default function SurreyPage() {
                 { num: '1', title: 'Discovery', desc: 'Audit your current situation and understand your goals.' },
                 { num: '2', title: 'Strategy', desc: `Develop a custom plan tailored to your ${county} market.` },
                 { num: '3', title: 'Execution', desc: 'Implement across all channels with expert management.' },
-                { num: '4', title: 'Growth', desc: 'Monitor, optimize, and help you grow consistently.' },
+                { num: '4', title: 'Growth', desc: 'Monitor, optimise, and help you grow consistently.' },
               ].map((step, i) => (
                 <div key={i} className="flex gap-6">
                   <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 text-white flex items-center justify-center text-2xl font-bold flex-shrink-0">{step.num}</div>

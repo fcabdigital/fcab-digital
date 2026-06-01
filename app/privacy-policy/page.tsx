@@ -43,13 +43,13 @@ export default function PrivacyPolicyPage() {
               <li>Respond to your inquiries and provide customer service</li>
               <li>Send you marketing communications (with your consent)</li>
               <li>Improve our website and services</li>
-              <li>Analyze website usage and trends</li>
+              <li>Analyse website usage and trends</li>
               <li>Comply with legal obligations</li>
             </ul>
 
             <h2>Data Security</h2>
             <p>
-              We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.
+              We implement appropriate technical and organisational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.
             </p>
 
             <h2>Contact Us</h2>
