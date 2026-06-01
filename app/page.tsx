@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import TrajectoryChart from '@/components/TrajectoryChart';
+import GoogleReviews from '@/components/GoogleReviews';
 
 const services = [
   {
@@ -45,8 +46,22 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="min-h-[90vh] flex items-center justify-center bg-gradient-to-br from-dark-900 via-dark-800 to-dark-900 text-white">
-        <div className="container py-20 text-center">
+      <section className="min-h-[90vh] flex items-center justify-center text-white relative overflow-hidden">
+        {/* Video Background */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/hero-bg.mp4" type="video/mp4" />
+        </video>
+
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-dark-900/50"></div>
+
+        <div className="container py-20 text-center relative z-10">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-slide-up">
             We are <span className="gradient-text">FCAB Digital</span>
           </h1>
@@ -60,6 +75,9 @@ export default function Home() {
           >
             TALK TO US
           </Link>
+          <div className="animate-slide-up" style={{ animationDelay: '0.3s' }}>
+            <GoogleReviews />
+          </div>
         </div>
       </section>
 
