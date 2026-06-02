@@ -3,11 +3,13 @@
 import Link from 'next/link';
 import LocationHero from '@/components/LocationHero';
 import { useState, useEffect } from 'react';
+import SchemaScript from '@/components/SchemaScript';
+import { localBusinessSchema } from '@/lib/schema';
 
-export default function GuildfordPage() {
-  const town = 'Farnborough';
-  const lat = 51.2813;
-  const lng = -0.7478;
+export default function WaltonOnThamesPage() {
+  const town = 'Walton-on-Thames';
+  const lat = 51.3866;
+  const lng = -0.4047;
 
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
   const [activeStep, setActiveStep] = useState(0);
@@ -66,6 +68,7 @@ export default function GuildfordPage() {
 
   return (
     <div className="bg-white">
+      <SchemaScript schema={localBusinessSchema('Walton-on-Thames', '+441234567890', 'Walton-on-Thames, Surrey, UK')} />
       <LocationHero town={town} lat={lat} lng={lng} />
 
       {/* About Section - Refined */}
@@ -74,10 +77,7 @@ export default function GuildfordPage() {
           <div className="mb-20">
             <h2 className="text-5xl font-bold mb-8 bg-gradient-to-r from-dark-900 to-dark-700 bg-clip-text text-transparent">Who We Are</h2>
             <p className="text-xl text-dark-600 mb-8 leading-relaxed">
-              FCAB Digital is a digital marketing agency for Farnborough, Hampshire.
-We help companies in Farnborough generate more leads and grow their businesses.
-
-              For some, it's essential to be forward thinking and focus on social media platforms. For others, customers are most likely to be reached via Google, whether that's Google ads, search engine optimisation, or beautiful websites.
+              At FCAB Digital, we work with our clients to create bespoke digital marketing solutions. Different businesses have different audiences and different marketing goals. For some, it's essential to be forward thinking and focus on social media platforms. For others, customers are most likely to be reached via Google, whether that's Google ads, search engine optimisation, or beautiful websites.
             </p>
             <div className="bg-gradient-to-r from-primary-50 to-primary-100 border-l-4 border-primary-500 p-8 mb-8 rounded-r-lg shadow-sm">
               <p className="text-dark-700 font-bold mb-3 text-lg">Our Approach</p>
@@ -127,13 +127,14 @@ We help companies in Farnborough generate more leads and grow their businesses.
                   <span className="text-primary-500 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0 mt-1">→</span>
                 </Link>
 
-                <div className="flex gap-4 items-start p-4 rounded-lg border border-transparent">
+                <Link href="/customer-relationship-management/" className="flex gap-4 items-start p-4 rounded-lg border border-transparent bg-transparent hover:bg-primary-50 hover:border-primary-200 transition-all duration-300 hover:-translate-y-0.5 group">
                   <div className="w-1 h-6 bg-gradient-to-b from-primary-500 to-accent-500 flex-shrink-0 mt-1"></div>
-                  <div>
-                    <p className="font-semibold text-dark-900 mb-1">Social Media Marketing</p>
-                    <p className="text-sm text-dark-600">Build your presence across Facebook, Instagram, LinkedIn</p>
+                  <div className="flex-1">
+                    <p className="font-semibold text-dark-900 mb-1 group-hover:text-primary-600 transition-colors">CRM Implementation</p>
+                    <p className="text-sm text-dark-600">Organise and nurture customer relationships</p>
                   </div>
-                </div>
+                  <span className="text-primary-500 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0 mt-1">→</span>
+                </Link>
               </div>
             </div>
 
@@ -190,60 +191,6 @@ We help companies in Farnborough generate more leads and grow their businesses.
         </div>
       </section>
 
-      {/* Services Section - Bold */}
-      <section id="services" className="py-28 bg-dark-50">
-        <div className="container max-w-5xl">
-          <h2 className="text-5xl font-bold mb-4 text-center bg-gradient-to-r from-dark-900 to-dark-700 bg-clip-text text-transparent">Our Digital Marketing Services</h2>
-          <p className="text-xl text-dark-600 text-center mb-20 max-w-2xl mx-auto">Complete solutions to reach your customers and grow your business</p>
-
-          <div className="space-y-6">
-            {[
-              { icon: '🌐', title: 'Web Design & Your Website', desc: 'Engaging websites lead to increased website traffic. Whilst the equation isn\'t as simple as that, it\'s important that your website works for your business. As a high street business, a website can act as a key part of your marketing strategy, giving your business credence. If you\'re an eCommerce business, the website is your business.\n\nWith humble beginnings in web design, FCAB Digital is there to support you in setting and achieving your business goals. We can plan, create, and maintain your website to help your business build relationships with the world.' },
-              { icon: '🔍', title: 'SEO Strategy', desc: 'A key skill in digital marketing is optimising a website\'s placement in search engines such as Google.\n\nWorking by using digital marketing tools such as Google Analytics and other services, we are a digital marketing agency that can be trusted. As a part of our service, we will give you insight into how you are currently performing, what other companies are doing, and deliver SEO services that function properly.' },
-              { icon: '💰', title: 'PPC and Paid Advertising', desc: 'The sure way to make yourself visible to potential customers is through the use of pay-per-click advertising and paid advertising. The benefit of PPC advertising is that you can place yourself at the top of Google search results immediately.\n\nPPC places you above websites that have good presence organically in the search engine results. This type of advertising is brilliant if your target market is the consumer.' },
-              { icon: '✨', title: 'Logo Design & Branding', desc: 'Potential customers do certain things when it comes to your business. Maybe they look at your website, or enter your shop. Regardless of what they do, the first thing they will notice is your branding.\n\nLogos and branding are an integral part of digital marketing. At FCAB Digital, agency knowledge, experience, and skill ensures basic functionalities of your marketing work.' },
-              { icon: '📱', title: 'Social Media Marketing', desc: 'Social media platforms are a great way of increasing your online presence. Increasingly the online world is restricting itself to platforms such as Facebook, Instagram, and TikTok.\n\nWith FCAB Digital, our years of experience working across the digital landscape means we are able to best advise on and execute social media campaigns for our clients.' }
-            ].map((service, idx) => (
-              <div key={idx} className="bg-white border border-dark-100 rounded-xl p-8 hover:border-primary-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <div className="flex gap-6">
-                  <div className="text-5xl flex-shrink-0">{service.icon}</div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold mb-4 text-dark-900">{service.title}</h3>
-                    <p className="text-dark-600 leading-relaxed whitespace-pre-line">{service.desc}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Section - Bold */}
-      <section className="py-28 bg-white">
-        <div className="container max-w-4xl">
-          <h2 className="text-5xl font-bold mb-4 text-center bg-gradient-to-r from-dark-900 to-dark-700 bg-clip-text text-transparent">Why Choose FCAB?</h2>
-          <p className="text-xl text-dark-600 text-center mb-20">Agencies are everywhere. Here's why you should trust us:</p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {[
-              { color: 'primary', title: 'Cross-Industry Experience', desc: 'We\'ve got a range of clients from multiple sectors, from cybersecurity and IT, to construction and architecture.' },
-              { color: 'accent', title: 'Partnerships', desc: 'We\'re trusted partners of global software brands. Like them, we share the mission of great value and unrivalled service.' },
-              { color: 'primary', title: 'Expertise', desc: 'We don\'t claim to know everything. We know SEO, websites, and CRM. In other words, we\'re experts in the sales process.' },
-              { color: 'accent', title: 'Open Dialogue', desc: 'We don\'t just send reports each month. We like to keep in touch.' }
-            ].map((item, idx) => {
-              const isBg = item.color === 'primary' ? 'bg-primary-50' : 'bg-accent-50';
-              const isBorder = item.color === 'primary' ? 'border-primary-500' : 'border-accent-500';
-              return (
-                <div key={idx} className={`${isBg} border-l-4 ${isBorder} p-8 rounded-r-xl hover:shadow-lg transition`}>
-                  <h3 className="text-xl font-bold mb-3 text-dark-900">{item.title}</h3>
-                  <p className="text-dark-600 leading-relaxed">{item.desc}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
       {/* Testimonials - Styled */}
       <section className="py-28 bg-gradient-to-b from-dark-50 to-white">
         <div className="container max-w-5xl">
@@ -296,23 +243,13 @@ We help companies in Farnborough generate more leads and grow their businesses.
         </div>
       </section>
 
-      {/* CTA Section - Bold */}
-      <section className="py-32 bg-gradient-to-r from-primary-500 via-primary-600 to-accent-500 text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-10 right-10 w-40 h-40 bg-white rounded-full blur-3xl"></div>
-          <div className="absolute bottom-10 left-10 w-40 h-40 bg-white rounded-full blur-3xl"></div>
-        </div>
-
-        <div className="container text-center max-w-2xl relative z-10">
-          <h2 className="text-5xl font-bold mb-8">So, How Can We Help?</h2>
-          <p className="text-2xl text-white/95 mb-6 leading-relaxed">
-            If your website isn't making you money, it is costing you money.
-          </p>
-          <p className="text-xl text-white/85 mb-12 leading-relaxed">
-            By working with us, you partner with people who know how to boost website traffic, increase sales, and save time.
-          </p>
-          <Link href="/contact-us" className="btn bg-white text-primary-500 hover:bg-dark-100 text-lg inline-block hover-lift shadow-lg">
-            Get in Touch
+      {/* CTA Section */}
+      <section className="py-32 bg-gradient-to-r from-primary-500 via-primary-600 to-accent-500 text-white">
+        <div className="container text-center">
+          <h2 className="text-5xl font-bold mb-6">Ready to Grow Your Business?</h2>
+          <p className="text-xl mb-10 opacity-90 max-w-2xl mx-auto">Let's talk about how we can help {town} businesses succeed online.</p>
+          <Link href="/contact-us/" className="btn btn-white text-lg px-8 py-4 inline-block hover:shadow-xl transition">
+            Get Your Free Audit
           </Link>
         </div>
       </section>

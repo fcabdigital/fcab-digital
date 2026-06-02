@@ -11,7 +11,7 @@ export default function HampshirePage() {
   const lat = 51.2000;
   const lng = -1.3000;
   const towns = ['Aldershot', 'Andover', 'Basingstoke', 'Eastleigh', 'Fleet', 'Portsmouth', 'Southampton', 'Winchester', 'Yateley'];
-  const [expandedFAQ, setExpandedFAQ] = useState(null);
+  const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
 
   const faqs = [
     {

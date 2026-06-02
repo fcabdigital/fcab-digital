@@ -6,7 +6,7 @@ import SchemaScript from '@/components/SchemaScript';
 import { serviceSchema } from '@/lib/schema';
 
 export default function SEOPage() {
-  const [expandedFAQ, setExpandedFAQ] = useState(null);
+  const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
 
   const faqs = [
     {
