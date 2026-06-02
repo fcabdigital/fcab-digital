@@ -41,52 +41,95 @@ export default function WebDesignPage() {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Services Section - Numbered Steps */}
+      <section className="py-28 bg-dark-100">
+        <div className="container max-w-4xl">
+          <h2 className="text-5xl font-bold mb-4 text-center bg-gradient-to-r from-dark-900 to-dark-700 bg-clip-text text-transparent">Web Design Services That Convert</h2>
+          <p className="text-xl text-dark-600 text-center mb-20">Build a website that represents your business and drives real results</p>
+
+          <div className="space-y-6">
+            {[
+              {
+                num: '1',
+                title: 'Responsive Design',
+                desc: 'Beautiful sites that work perfectly on all devices—desktop, tablet, and mobile.',
+                points: ['Mobile-first approach', 'Cross-browser testing', 'Fluid, flexible layouts']
+              },
+              {
+                num: '2',
+                title: 'Conversion Optimisation',
+                desc: 'Every design element is strategically placed to guide visitors toward taking action.',
+                points: ['UX/UI best practices', 'Clear CTAs & forms', 'A/B testing']
+              },
+              {
+                num: '3',
+                title: 'Performance & Speed',
+                desc: 'Lightning-fast load times that keep visitors engaged and improve SEO rankings.',
+                points: ['Code optimisation', 'Image compression', 'Core Web Vitals']
+              },
+              {
+                num: '4',
+                title: 'Modern Tech Stack',
+                desc: 'Built with latest frameworks and tools for scalability, security, and maintainability.',
+                points: ['React & Next.js', 'WordPress integration', 'E-commerce solutions']
+              }
+            ].map((service, idx) => {
+              const cardContent = (
+                <div className={`flex flex-col items-center text-center p-8 rounded-xl bg-white border border-dark-100 hover:border-primary-300 transition-all duration-300 group`}>
+                  <div className="mb-6">
+                    <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 text-white flex items-center justify-center">
+                      <div className="text-5xl font-black">{service.num}</div>
+                    </div>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-3 text-dark-900">{service.title}</h3>
+                  <p className="text-dark-600 mb-4 leading-relaxed">{service.desc}</p>
+                  <ul className="space-y-2 w-full">
+                    {service.points.map((point, i) => (
+                      <li key={i} className="flex items-center justify-center gap-2 text-sm text-dark-600">
+                        <span className="text-primary-500 font-bold">•</span>
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              );
+              return (
+                <div key={idx}>
+                  {cardContent}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Other Services Section */}
       <section className="py-20 bg-white">
-        <div className="container">
-          <h2 className="text-4xl font-bold mb-4">Web Design Services</h2>
-          <p className="text-dark-600 mb-12 max-w-2xl">Your website is your digital storefront. We design and build modern, fast, and conversion-focused websites that represent your business and drive results.</p>
+        <div className="container max-w-4xl">
+          <h2 className="text-4xl font-bold text-center mb-4">Explore Our Other Services</h2>
+          <p className="text-center text-dark-600 mb-16">We offer comprehensive digital marketing solutions across multiple channels</p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="p-8 bg-primary-50 rounded-lg border border-primary-200 hover-lift">
-              <h3 className="text-2xl font-bold mb-4">Responsive Design</h3>
-              <p className="text-dark-600 mb-4">Beautiful sites that work perfectly on all devices—desktop, tablet, and mobile.</p>
-              <ul className="space-y-2 text-sm">
-                <li className="flex items-start gap-2"><span className="text-primary-500 font-bold">✓</span> <span>Mobile-first approach</span></li>
-                <li className="flex items-start gap-2"><span className="text-primary-500 font-bold">✓</span> <span>Cross-browser testing</span></li>
-                <li className="flex items-start gap-2"><span className="text-primary-500 font-bold">✓</span> <span>Fluid, flexible layouts</span></li>
-              </ul>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <Link href="/seo/" className="p-8 bg-gradient-to-br from-primary-50 to-primary-100 rounded-xl border border-primary-200 hover:border-primary-500 hover:shadow-lg transition-all hover:-translate-y-1 text-center group">
+              <div className="text-4xl mb-4">📈</div>
+              <h3 className="text-xl font-bold text-dark-900 mb-2 group-hover:text-primary-600 transition-colors">SEO</h3>
+              <p className="text-sm text-dark-600 mb-4">Rank higher and drive organic traffic</p>
+              <span className="text-primary-600 font-semibold">Learn More →</span>
+            </Link>
 
-            <div className="p-8 bg-accent-50 rounded-lg border border-accent-200 hover-lift">
-              <h3 className="text-2xl font-bold mb-4">Conversion Optimisation</h3>
-              <p className="text-dark-600 mb-4">Every design element is strategically placed to guide visitors toward taking action.</p>
-              <ul className="space-y-2 text-sm">
-                <li className="flex items-start gap-2"><span className="text-accent-500 font-bold">✓</span> <span>UX/UI best practices</span></li>
-                <li className="flex items-start gap-2"><span className="text-accent-500 font-bold">✓</span> <span>Clear CTAs &amp; forms</span></li>
-                <li className="flex items-start gap-2"><span className="text-accent-500 font-bold">✓</span> <span>A/B testing</span></li>
-              </ul>
-            </div>
+            <Link href="/google-ads/" className="p-8 bg-gradient-to-br from-accent-50 to-accent-100 rounded-xl border border-accent-200 hover:border-accent-500 hover:shadow-lg transition-all hover:-translate-y-1 text-center group">
+              <div className="text-4xl mb-4">🎯</div>
+              <h3 className="text-xl font-bold text-dark-900 mb-2 group-hover:text-accent-600 transition-colors">Google Ads & PPC</h3>
+              <p className="text-sm text-dark-600 mb-4">Immediate visibility and qualified leads</p>
+              <span className="text-accent-600 font-semibold">Learn More →</span>
+            </Link>
 
-            <div className="p-8 bg-primary-50 rounded-lg border border-primary-200 hover-lift">
-              <h3 className="text-2xl font-bold mb-4">Performance &amp; Speed</h3>
-              <p className="text-dark-600 mb-4">Lightning-fast load times that keep visitors engaged and improve SEO rankings.</p>
-              <ul className="space-y-2 text-sm">
-                <li className="flex items-start gap-2"><span className="text-primary-500 font-bold">✓</span> <span>Code optimisation</span></li>
-                <li className="flex items-start gap-2"><span className="text-primary-500 font-bold">✓</span> <span>Image compression</span></li>
-                <li className="flex items-start gap-2"><span className="text-primary-500 font-bold">✓</span> <span>Core Web Vitals</span></li>
-              </ul>
-            </div>
-
-            <div className="p-8 bg-accent-50 rounded-lg border border-accent-200 hover-lift">
-              <h3 className="text-2xl font-bold mb-4">Modern Tech Stack</h3>
-              <p className="text-dark-600 mb-4">Built with latest frameworks and tools for scalability, security, and maintainability.</p>
-              <ul className="space-y-2 text-sm">
-                <li className="flex items-start gap-2"><span className="text-accent-500 font-bold">✓</span> <span>React &amp; Next.js</span></li>
-                <li className="flex items-start gap-2"><span className="text-accent-500 font-bold">✓</span> <span>WordPress integration</span></li>
-                <li className="flex items-start gap-2"><span className="text-accent-500 font-bold">✓</span> <span>E-commerce solutions</span></li>
-              </ul>
-            </div>
+            <Link href="/customer-relationship-management/" className="p-8 bg-gradient-to-br from-primary-50 to-primary-100 rounded-xl border border-primary-200 hover:border-primary-500 hover:shadow-lg transition-all hover:-translate-y-1 text-center group">
+              <div className="text-4xl mb-4">👥</div>
+              <h3 className="text-xl font-bold text-dark-900 mb-2 group-hover:text-primary-600 transition-colors">CRM</h3>
+              <p className="text-sm text-dark-600 mb-4">Organize relationships and automate sales</p>
+              <span className="text-primary-600 font-semibold">Learn More →</span>
+            </Link>
           </div>
         </div>
       </section>

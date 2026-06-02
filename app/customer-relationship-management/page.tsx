@@ -41,52 +41,95 @@ export default function CRMPage() {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Services Section - Numbered Steps */}
+      <section className="py-28 bg-dark-100">
+        <div className="container max-w-4xl">
+          <h2 className="text-5xl font-bold mb-4 text-center bg-gradient-to-r from-dark-900 to-dark-700 bg-clip-text text-transparent">CRM Services for Growing Businesses</h2>
+          <p className="text-xl text-dark-600 text-center mb-20">Implement and optimise CRM systems to drive sales and customer retention</p>
+
+          <div className="space-y-6">
+            {[
+              {
+                num: '1',
+                title: 'HubSpot Implementation',
+                desc: 'We\'re certified HubSpot partners. From basic setup to advanced automation, we help you leverage HubSpot to grow your business.',
+                points: ['Full HubSpot setup & configuration', 'Custom workflows & automation', 'Integration with existing tools']
+              },
+              {
+                num: '2',
+                title: 'Sales Automation',
+                desc: 'Streamline your sales process with automated workflows that save time and improve conversion rates.',
+                points: ['Pipeline optimisation', 'Automated lead nurturing', 'Sales cycle visibility']
+              },
+              {
+                num: '3',
+                title: 'Data Migration & Integration',
+                desc: 'Safely migrate your existing data and connect your CRM with the tools your team already uses.',
+                points: ['Data import & cleanup', 'API integrations', 'Third-party tool sync']
+              },
+              {
+                num: '4',
+                title: 'Training & Support',
+                desc: 'Get your team up to speed with comprehensive training and ongoing support to maximise CRM value.',
+                points: ['Team training sessions', 'Documentation & guides', 'Ongoing optimisation']
+              }
+            ].map((service, idx) => {
+              const cardContent = (
+                <div className={`flex flex-col items-center text-center p-8 rounded-xl bg-white border border-dark-100 hover:border-primary-300 transition-all duration-300 group`}>
+                  <div className="mb-6">
+                    <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 text-white flex items-center justify-center">
+                      <div className="text-5xl font-black">{service.num}</div>
+                    </div>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-3 text-dark-900">{service.title}</h3>
+                  <p className="text-dark-600 mb-4 leading-relaxed">{service.desc}</p>
+                  <ul className="space-y-2 w-full">
+                    {service.points.map((point, i) => (
+                      <li key={i} className="flex items-center justify-center gap-2 text-sm text-dark-600">
+                        <span className="text-primary-500 font-bold">•</span>
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              );
+              return (
+                <div key={idx}>
+                  {cardContent}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Other Services Section */}
       <section className="py-20 bg-white">
-        <div className="container">
-          <h2 className="text-4xl font-bold mb-4">CRM Services for Growing Businesses</h2>
-          <p className="text-dark-600 mb-12 max-w-2xl">Customer Relationship Management systems help you organize, track, and nurture customer interactions. We help implement and optimise CRM systems to drive sales and customer retention.</p>
+        <div className="container max-w-4xl">
+          <h2 className="text-4xl font-bold text-center mb-4">Explore Our Other Services</h2>
+          <p className="text-center text-dark-600 mb-16">We offer comprehensive digital marketing solutions across multiple channels</p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="p-8 bg-primary-50 rounded-lg border border-primary-200 hover-lift">
-              <h3 className="text-2xl font-bold mb-4">HubSpot Implementation</h3>
-              <p className="text-dark-600 mb-4">We're certified HubSpot partners. From basic setup to advanced automation, we help you leverage HubSpot to grow your business.</p>
-              <ul className="space-y-2 text-sm">
-                <li className="flex items-start gap-2"><span className="text-primary-500 font-bold">✓</span> <span>Full HubSpot setup &amp; configuration</span></li>
-                <li className="flex items-start gap-2"><span className="text-primary-500 font-bold">✓</span> <span>Custom workflows &amp; automation</span></li>
-                <li className="flex items-start gap-2"><span className="text-primary-500 font-bold">✓</span> <span>Integration with existing tools</span></li>
-              </ul>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <Link href="/seo/" className="p-8 bg-gradient-to-br from-primary-50 to-primary-100 rounded-xl border border-primary-200 hover:border-primary-500 hover:shadow-lg transition-all hover:-translate-y-1 text-center group">
+              <div className="text-4xl mb-4">📈</div>
+              <h3 className="text-xl font-bold text-dark-900 mb-2 group-hover:text-primary-600 transition-colors">SEO</h3>
+              <p className="text-sm text-dark-600 mb-4">Rank higher and drive organic traffic</p>
+              <span className="text-primary-600 font-semibold">Learn More →</span>
+            </Link>
 
-            <div className="p-8 bg-accent-50 rounded-lg border border-accent-200 hover-lift">
-              <h3 className="text-2xl font-bold mb-4">Sales Automation</h3>
-              <p className="text-dark-600 mb-4">Streamline your sales process with automated workflows that save time and improve conversion rates.</p>
-              <ul className="space-y-2 text-sm">
-                <li className="flex items-start gap-2"><span className="text-accent-500 font-bold">✓</span> <span>Pipeline optimisation</span></li>
-                <li className="flex items-start gap-2"><span className="text-accent-500 font-bold">✓</span> <span>Automated lead nurturing</span></li>
-                <li className="flex items-start gap-2"><span className="text-accent-500 font-bold">✓</span> <span>Sales cycle visibility</span></li>
-              </ul>
-            </div>
+            <Link href="/web-design/" className="p-8 bg-gradient-to-br from-accent-50 to-accent-100 rounded-xl border border-accent-200 hover:border-accent-500 hover:shadow-lg transition-all hover:-translate-y-1 text-center group">
+              <div className="text-4xl mb-4">🌐</div>
+              <h3 className="text-xl font-bold text-dark-900 mb-2 group-hover:text-accent-600 transition-colors">Web Design</h3>
+              <p className="text-sm text-dark-600 mb-4">Modern, fast, conversion-focused sites</p>
+              <span className="text-accent-600 font-semibold">Learn More →</span>
+            </Link>
 
-            <div className="p-8 bg-primary-50 rounded-lg border border-primary-200 hover-lift">
-              <h3 className="text-2xl font-bold mb-4">Data Migration &amp; Integration</h3>
-              <p className="text-dark-600 mb-4">Safely migrate your existing data and connect your CRM with the tools your team already uses.</p>
-              <ul className="space-y-2 text-sm">
-                <li className="flex items-start gap-2"><span className="text-primary-500 font-bold">✓</span> <span>Data import &amp; cleanup</span></li>
-                <li className="flex items-start gap-2"><span className="text-primary-500 font-bold">✓</span> <span>API integrations</span></li>
-                <li className="flex items-start gap-2"><span className="text-primary-500 font-bold">✓</span> <span>Third-party tool sync</span></li>
-              </ul>
-            </div>
-
-            <div className="p-8 bg-accent-50 rounded-lg border border-accent-200 hover-lift">
-              <h3 className="text-2xl font-bold mb-4">Training &amp; Support</h3>
-              <p className="text-dark-600 mb-4">Get your team up to speed with comprehensive training and ongoing support to maximize CRM value.</p>
-              <ul className="space-y-2 text-sm">
-                <li className="flex items-start gap-2"><span className="text-accent-500 font-bold">✓</span> <span>Team training sessions</span></li>
-                <li className="flex items-start gap-2"><span className="text-accent-500 font-bold">✓</span> <span>Documentation &amp; guides</span></li>
-                <li className="flex items-start gap-2"><span className="text-accent-500 font-bold">✓</span> <span>Ongoing optimisation</span></li>
-              </ul>
-            </div>
+            <Link href="/google-ads/" className="p-8 bg-gradient-to-br from-primary-50 to-primary-100 rounded-xl border border-primary-200 hover:border-primary-500 hover:shadow-lg transition-all hover:-translate-y-1 text-center group">
+              <div className="text-4xl mb-4">🎯</div>
+              <h3 className="text-xl font-bold text-dark-900 mb-2 group-hover:text-primary-600 transition-colors">Google Ads & PPC</h3>
+              <p className="text-sm text-dark-600 mb-4">Immediate visibility and qualified leads</p>
+              <span className="text-primary-600 font-semibold">Learn More →</span>
+            </Link>
           </div>
         </div>
       </section>
