@@ -2,6 +2,8 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import SchemaScript from '@/components/SchemaScript';
+import { serviceSchema } from '@/lib/schema';
 
 export default function SEOPage() {
   const [expandedFAQ, setExpandedFAQ] = useState(null);
@@ -48,6 +50,7 @@ export default function SEOPage() {
 
   return (
     <div className="bg-white">
+      <SchemaScript schema={serviceSchema('SEO Services', 'Specialist SEO agency providing technical SEO, content optimization, local SEO, and link building services to improve your online visibility and drive qualified traffic.')} />
       {/* Hero Section */}
       <section className="relative min-h-[60vh] bg-gradient-to-br from-primary-600 via-primary-500 to-accent-500 text-white py-20 flex items-center">
         <div className="absolute inset-0 opacity-20">

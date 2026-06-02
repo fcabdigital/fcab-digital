@@ -3,6 +3,8 @@
 import Link from 'next/link';
 import TrajectoryChart from '@/components/TrajectoryChart';
 import GoogleReviews from '@/components/GoogleReviews';
+import SchemaScript from '@/components/SchemaScript';
+import { organizationSchema } from '@/lib/schema';
 
 const services = [
   {
@@ -47,6 +49,7 @@ const reasons = [
 export default function Home() {
   return (
     <div>
+      <SchemaScript schema={organizationSchema} />
       {/* Hero Section */}
       <section className="min-h-[90vh] flex items-center justify-center text-white relative overflow-hidden">
         {/* Video Background */}

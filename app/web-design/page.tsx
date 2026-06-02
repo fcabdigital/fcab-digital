@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import SchemaScript from '@/components/SchemaScript';
+import { serviceSchema } from '@/lib/schema';
 
 export const metadata = {
   title: 'Web Design | FCAB Digital',
@@ -8,6 +10,7 @@ export const metadata = {
 export default function WebDesignPage() {
   return (
     <div>
+      <SchemaScript schema={serviceSchema('Web Design Services', 'Modern, fast, and conversion-focused web design and development services. Responsive design, performance optimization, and user experience focused.')} />
       {/* Hero Section */}
       <section className="relative min-h-[60vh] bg-gradient-to-br from-primary-600 via-primary-500 to-accent-500 text-white py-20 flex items-center">
         <div className="absolute inset-0 opacity-20">

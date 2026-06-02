@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import SchemaScript from '@/components/SchemaScript';
+import { serviceSchema } from '@/lib/schema';
 
 export const metadata = {
   title: 'Google Ads | FCAB Digital',
@@ -8,6 +10,7 @@ export const metadata = {
 export default function GoogleAdsPage() {
   return (
     <div>
+      <SchemaScript schema={serviceSchema('Google Ads & PPC Services', 'Expert Google Ads management and PPC campaign services. Search ads, display advertising, shopping ads, and video ads to drive qualified leads.')} />
       {/* Hero Section */}
       <section className="relative min-h-[60vh] bg-gradient-to-br from-primary-600 via-primary-500 to-accent-500 text-white py-20 flex items-center">
         <div className="absolute inset-0 opacity-20">

@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import SchemaScript from '@/components/SchemaScript';
+import { serviceSchema } from '@/lib/schema';
 
 export const metadata = {
   title: 'Customer Relationship Management | FCAB Digital',
@@ -8,6 +10,7 @@ export const metadata = {
 export default function CRMPage() {
   return (
     <div>
+      <SchemaScript schema={serviceSchema('CRM Implementation Services', 'HubSpot CRM implementation, sales automation, data migration, and training services to streamline customer relationships and improve sales processes.')} />
       {/* Hero Section */}
       <section className="relative min-h-[60vh] bg-gradient-to-br from-primary-600 via-primary-500 to-accent-500 text-white py-20 flex items-center">
         <div className="absolute inset-0 opacity-20">
