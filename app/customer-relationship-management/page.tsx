@@ -1,5 +1,10 @@
 import Link from 'next/link';
 
+export const metadata = {
+  title: 'Customer Relationship Management | FCAB Digital',
+  description: 'FCAB Digital are a HubSpot agency, Surrey, who partner with HubSpot to provide improved sales and marketing management.',
+};
+
 export default function CRMPage() {
   return (
     <div>

@@ -1,5 +1,10 @@
 import Link from 'next/link';
 
+export const metadata = {
+  title: 'Google Ads | FCAB Digital',
+  description: 'FCAB Digital are leading suppliers of Google Ads management. We are specialists in generating leads from Google Ads for businesses in the UK.',
+};
+
 export default function GoogleAdsPage() {
   return (
     <div>

@@ -1,6 +1,11 @@
 'use client';
 
 import Link from 'next/link';
+
+export const metadata = {
+  title: 'SEO | FCAB Digital',
+  description: 'FCAB Digital are leading suppliers of SEO services. We are specialists in improving your site\'s visibility and increasing inbound leads.',
+};
 import { useState } from 'react';
 
 export default function SEOPage() {

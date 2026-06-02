@@ -1,5 +1,10 @@
 import Link from 'next/link';
 
+export const metadata = {
+  title: 'Web Design | FCAB Digital',
+  description: 'FCAB Digital are web design and build specialists. Looking to refresh your site and convert more visitors? We can help.',
+};
+
 export default function WebDesignPage() {
   return (
     <div>
