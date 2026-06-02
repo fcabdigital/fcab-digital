@@ -191,6 +191,34 @@ export default function WaltonOnThamesPage() {
         </div>
       </section>
 
+      {/* Services Section - Bold */}
+      <section id="services" className="py-28 bg-dark-50">
+        <div className="container max-w-5xl">
+          <h2 className="text-5xl font-bold mb-4 text-center bg-gradient-to-r from-dark-900 to-dark-700 bg-clip-text text-transparent">Our Digital Marketing Services</h2>
+          <p className="text-xl text-dark-600 text-center mb-20 max-w-2xl mx-auto">Complete solutions to reach your customers and grow your business</p>
+
+          <div className="space-y-6">
+            {[
+              { icon: '🌐', title: 'Web Design & Your Website', desc: 'Engaging websites lead to increased website traffic. Whilst the equation isn\'t as simple as that, it\'s important that your website works for your business. As a high street business, a website can act as a key part of your marketing strategy, giving your business credence. If you\'re an eCommerce business, the website is your business.\n\nWith humble beginnings in web design, FCAB Digital is there to support you in setting and achieving your business goals. We can plan, create, and maintain your website to help your business build relationships with the world.' },
+              { icon: '🔍', title: 'SEO Strategy', desc: 'A key skill in digital marketing is optimising a website\'s placement in search engines such as Google.\n\nWorking by using digital marketing tools such as Google Analytics and other services, we are a digital marketing agency that can be trusted. As a part of our service, we will give you insight into how you are currently performing, what other companies are doing, and deliver SEO services that function properly.' },
+              { icon: '💰', title: 'PPC and Paid Advertising', desc: 'The sure way to make yourself visible to potential customers is through the use of pay-per-click advertising and paid advertising. The benefit of PPC advertising is that you can place yourself at the top of Google search results immediately.\n\nPPC places you above websites that have good presence organically in the search engine results. This type of advertising is brilliant if your target market is the consumer.' },
+              { icon: '✨', title: 'Logo Design & Branding', desc: 'Potential customers do certain things when it comes to your business. Maybe they look at your website, or enter your shop. Regardless of what they do, the first thing they will notice is your branding.\n\nLogos and branding are an integral part of digital marketing. At FCAB Digital, agency knowledge, experience, and skill ensures basic functionalities of your marketing work.' },
+              { icon: '📱', title: 'Social Media Marketing', desc: 'Social media platforms are a great way of increasing your online presence. Increasingly the online world is restricting itself to platforms such as Facebook, Instagram, and TikTok.\n\nWith FCAB Digital, our years of experience working across the digital landscape means we are able to best advise on and execute social media campaigns for our clients.' }
+            ].map((service, idx) => (
+              <div key={idx} className="bg-white border border-dark-100 rounded-xl p-8 hover:border-primary-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <div className="flex gap-6">
+                  <div className="text-5xl flex-shrink-0">{service.icon}</div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold mb-4 text-dark-900">{service.title}</h3>
+                    <p className="text-dark-600 leading-relaxed whitespace-pre-line">{service.desc}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials - Styled */}
       <section className="py-28 bg-gradient-to-b from-dark-50 to-white">
         <div className="container max-w-5xl">
