@@ -6,9 +6,14 @@ interface LocationHeroProps {
   lng: number;
 }
 
-export default async function LocationHero({ town, lat, lng }: LocationHeroProps) {
-  const mapResponse = await fetch(`${process.env.VERCEL_URL ? 'https://' + process.env.VERCEL_URL : 'http://localhost:3000'}/api/map?lat=${lat}&lng=${lng}`);
-  const { mapUrl } = await mapResponse.json();
+export default function LocationHero({ town, lat, lng }: LocationHeroProps) {
+  const token = process.env.MAPBOX_TOKEN;
+  const zoom = 13;
+  const width = 1200;
+  const height = 600;
+  const mapUrl = token
+    ? `https://api.mapbox.com/styles/v1/mapbox/light-v11/static/${lng},${lat},${zoom},0,0/${width}x${height}@2x?access_token=${token}`
+    : '';
 
   return (
     <section className="relative min-h-[70vh] bg-gradient-to-br from-primary-600 via-primary-500 to-accent-500 text-white py-20 flex items-center overflow-hidden">
