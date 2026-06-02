@@ -271,12 +271,22 @@ export default function WaltonOnThamesPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-32 bg-gradient-to-r from-primary-500 via-primary-600 to-accent-500 text-white">
-        <div className="container text-center">
-          <h2 className="text-5xl font-bold mb-6">Ready to Grow Your Business?</h2>
-          <p className="text-xl mb-10 opacity-90 max-w-2xl mx-auto">Let's talk about how we can help {town} businesses succeed online.</p>
-          <Link href="/contact-us/" className="btn btn-white text-lg px-8 py-4 inline-block hover:shadow-xl transition">
+      {/* CTA Section - Bold */}
+      <section className="py-32 bg-gradient-to-r from-primary-500 via-primary-600 to-accent-500 text-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-10 right-10 w-40 h-40 bg-white rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 left-10 w-40 h-40 bg-white rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="container text-center max-w-2xl relative z-10">
+          <h2 className="text-5xl font-bold mb-8">Ready to Grow Your Business?</h2>
+          <p className="text-2xl text-white/95 mb-6 leading-relaxed">
+            Let's talk about how we can help {town} businesses succeed online.
+          </p>
+          <p className="text-xl text-white/85 mb-12 leading-relaxed">
+            Whether you need SEO, ads, a new website, or a complete digital marketing overhaul, we can help.
+          </p>
+          <Link href="/contact-us/" className="btn bg-white text-primary-500 hover:bg-dark-100 text-lg inline-block hover-lift shadow-lg">
             Get Your Free Audit
           </Link>
         </div>
