@@ -11,7 +11,7 @@ export default function SurreyPage() {
   const lat = 51.2500;
   const lng = -0.5000;
   const towns = ['Chertsey', 'Dorking', 'Epsom', 'Esher', 'Farnborough', 'Guildford', 'Leatherhead', 'Shepperton', 'Weybridge', 'Woking'];
-  const [expandedFAQ, setExpandedFAQ] = useState(null);
+  const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
 
   const faqs = [
     {

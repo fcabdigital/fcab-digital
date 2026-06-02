@@ -9,7 +9,7 @@ export default function GuildfordPage() {
   const lat = 50.9097;
   const lng = -1.4044;
 
-  const [expandedFAQ, setExpandedFAQ] = useState(null);
+  const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
   const [activeStep, setActiveStep] = useState(0);
 
   useEffect(() => {
