@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { generateMapUrl } from '@/data/locations';
 
 interface LocationHeroProps {
   town: string;
@@ -7,8 +6,9 @@ interface LocationHeroProps {
   lng: number;
 }
 
-export default function LocationHero({ town, lat, lng }: LocationHeroProps) {
-  const mapUrl = generateMapUrl(lat, lng);
+export default async function LocationHero({ town, lat, lng }: LocationHeroProps) {
+  const mapResponse = await fetch(`${process.env.VERCEL_URL ? 'https://' + process.env.VERCEL_URL : 'http://localhost:3000'}/api/map?lat=${lat}&lng=${lng}`);
+  const { mapUrl } = await mapResponse.json();
 
   return (
     <section className="relative min-h-[70vh] bg-gradient-to-br from-primary-600 via-primary-500 to-accent-500 text-white py-20 flex items-center overflow-hidden">

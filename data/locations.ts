@@ -34,10 +34,5 @@ export function getLocationData(key: LocationKey) {
 }
 
 export function generateMapUrl(lat: number, lng: number): string {
-  const token = process.env.NEXT_PUBLIC_MAPBOX_TOKEN;
-  const zoom = 13;
-  const width = 1200;
-  const height = 600;
-
-  return `https://api.mapbox.com/styles/v1/mapbox/light-v11/static/${lng},${lat},${zoom},0,0/${width}x${height}@2x?access_token=${token}`;
+  return `/api/map?lat=${lat}&lng=${lng}`;
 }
