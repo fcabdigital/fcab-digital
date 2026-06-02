@@ -1,0 +1,25 @@
+# Allow all bots to crawl the site
+User-agent: *
+Allow: /
+
+# Disallow private/admin pages
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+
+# Point to sitemap
+Sitemap: https://fcabdigital.com/sitemap.xml
+
+# Crawl delay for bots (in seconds)
+Crawl-delay: 1
+Request-rate: 30/60
+
+# Specific rules for Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Specific rules for Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
