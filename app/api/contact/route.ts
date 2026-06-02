@@ -1,10 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { Resend } from 'resend';
 
-// For local development, we'll use a simple in-memory queue
-// For production on Vercel, you'll need to configure an email service
-// Options: SendGrid, Mailgun, Resend, AWS SES, or your own SMTP
-
-const emailQueue: any[] = [];
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: NextRequest) {
   try {
@@ -18,10 +15,20 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Store email data (in production, send via actual email service)
-    const emailData = {
-      to: 'joe@fcabdigital.com',
-      from: email,
+    // Check if Resend is configured
+    if (!process.env.RESEND_API_KEY) {
+      console.error('Resend API key not configured');
+      return NextResponse.json(
+        { error: 'Email service not configured' },
+        { status: 500 }
+      );
+    }
+
+    // Send email via Resend
+    await resend.emails.send({
+      from: 'Contact Form <onboarding@resend.dev>',
+      to: 'hello@fcabdigital.com',
+      replyTo: email,
       subject: `New Contact Form Submission from ${name}`,
       html: `
         <h2>New Contact Form Submission</h2>
@@ -31,33 +38,18 @@ export async function POST(request: NextRequest) {
         <p><strong>Message:</strong></p>
         <p>${message.replace(/\n/g, '<br>')}</p>
       `,
-      timestamp: new Date().toISOString(),
-    };
+    });
 
-    emailQueue.push(emailData);
-
-    // Log to console (visible in Vercel logs)
-    console.log('New contact form submission:', emailData);
-
-    // TODO: In production, replace this with actual email sending
-    // Example with Resend (recommended for Vercel):
-    // const { Resend } = require('resend');
-    // const resend = new Resend(process.env.RESEND_API_KEY);
-    // await resend.emails.send(emailData);
-
-    // Example with SendGrid:
-    // const sgMail = require('@sendgrid/mail');
-    // sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-    // await sgMail.send(emailData);
+    console.log('Contact form email sent to hello@fcabdigital.com from:', name);
 
     return NextResponse.json(
-      { success: true, message: 'Email queued for sending' },
+      { success: true, message: 'Message sent successfully' },
       { status: 200 }
     );
   } catch (error) {
     console.error('Contact form error:', error);
     return NextResponse.json(
-      { error: 'Failed to process request' },
+      { error: 'Failed to send message' },
       { status: 500 }
     );
   }
