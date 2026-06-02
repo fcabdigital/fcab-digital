@@ -3,6 +3,8 @@
 import Link from 'next/link';
 import CountyHero from '@/components/CountyHero';
 import { useState } from 'react';
+import SchemaScript from '@/components/SchemaScript';
+import { localBusinessSchema } from '@/lib/schema';
 
 export default function SurreyPage() {
   const county = 'Surrey';
@@ -36,6 +38,7 @@ export default function SurreyPage() {
 
   return (
     <div>
+      <SchemaScript schema={localBusinessSchema('Surrey', '+441234567890', 'Surrey, UK')} />
       <CountyHero county={county} lat={lat} lng={lng} />
 
       {/* About Surrey Section */}

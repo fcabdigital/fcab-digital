@@ -3,6 +3,8 @@
 import Link from 'next/link';
 import LocationHero from '@/components/LocationHero';
 import { useState, useEffect } from 'react';
+import SchemaScript from '@/components/SchemaScript';
+import { localBusinessSchema } from '@/lib/schema';
 
 export default function GuildfordPage() {
   const town = 'Guildford';
@@ -66,6 +68,7 @@ export default function GuildfordPage() {
 
   return (
     <div className="bg-white">
+      <SchemaScript schema={localBusinessSchema('Guildford', '+441234567890', 'Guildford, Surrey, UK')} />
       <LocationHero town={town} lat={lat} lng={lng} />
 
       {/* About Section - Refined */}
