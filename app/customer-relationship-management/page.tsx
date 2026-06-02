@@ -12,7 +12,7 @@ export default function CRMPage() {
         <div className="container relative z-10">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-slide-up">CRM Implementation</h1>
           <p className="text-xl text-white/90 max-w-2xl animate-slide-up" style={{ animationDelay: '0.1s' }}>
-            Organize customer relationships and automate sales with expert CRM setup
+            Organise customer relationships and automate sales with expert CRM setup
           </p>
         </div>
       </section>
@@ -45,7 +45,7 @@ export default function CRMPage() {
       <section className="py-20 bg-white">
         <div className="container">
           <h2 className="text-4xl font-bold mb-4">CRM Services for Growing Businesses</h2>
-          <p className="text-dark-600 mb-12 max-w-2xl">Customer Relationship Management systems help you organize, track, and nurture customer interactions. We help implement and optimise CRM systems to drive sales and customer retention.</p>
+          <p className="text-dark-600 mb-12 max-w-2xl">Customer Relationship Management systems help you organise, track, and nurture customer interactions. We help implement and optimise CRM systems to drive sales and customer retention.</p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="p-8 bg-primary-50 rounded-lg border border-primary-200 hover-lift">
