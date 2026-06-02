@@ -4,12 +4,7 @@ import Image from 'next/image';
 
 export default function GoogleReviews() {
   return (
-    <a
-      href="https://g.page/r/CeFNCmLp9jq_EAE/review"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="inline-flex items-center gap-3 mt-8 px-6 py-3 bg-white/10 hover:bg-white/20 rounded-lg border border-white/20 transition-all"
-    >
+    <div className="inline-flex items-center gap-3 mt-8 px-6 py-3 bg-white/10 rounded-lg border border-white/20">
       {/* Google Logo */}
       <Image
         src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
@@ -25,6 +20,6 @@ export default function GoogleReviews() {
         <span className="text-white font-semibold">5.0</span>
         <span className="text-white/80 text-sm">(16 reviews)</span>
       </div>
-  
+    </div>
   );
 }
