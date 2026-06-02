@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import TrajectoryChart from '@/components/TrajectoryChart';
 import GoogleReviews from '@/components/GoogleReviews';
