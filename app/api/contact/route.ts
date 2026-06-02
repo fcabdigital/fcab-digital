@@ -26,7 +26,7 @@ export async function POST(request: NextRequest) {
 
     // Send email via Resend
     await resend.emails.send({
-      from: 'Contact Form <onboarding@resend.dev>',
+      from: 'Contact Form <noreply@fcabdigital.com>',
       to: 'hello@fcabdigital.com',
       replyTo: email,
       subject: `New Contact Form Submission from ${name}`,
