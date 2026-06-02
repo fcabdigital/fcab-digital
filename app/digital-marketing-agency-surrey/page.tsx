@@ -1,35 +1,15 @@
 import Link from 'next/link';
+import CountyHero from '@/components/CountyHero';
 
 export default function SurreyPage() {
   const county = 'Surrey';
+  const lat = 51.2500;
+  const lng = -0.5000;
   const towns = ['Chertsey', 'Dorking', 'Epsom', 'Esher', 'Farnborough', 'Guildford', 'Leatherhead', 'Shepperton', 'Weybridge', 'Woking'];
 
   return (
     <div>
-      {/* Hero Section */}
-      <section className="relative min-h-[70vh] bg-gradient-to-br from-primary-600 via-primary-500 to-accent-500 text-white py-20 flex items-center">
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-20 right-20 w-72 h-72 bg-white rounded-full blur-3xl"></div>
-          <div className="absolute bottom-10 left-10 w-96 h-96 bg-accent-300 rounded-full blur-3xl"></div>
-        </div>
-        <div className="container relative z-10">
-          <h1 className="text-6xl md:text-7xl font-bold mb-6 animate-slide-up">{county}</h1>
-          <p className="text-2xl text-white/90 mb-8 max-w-2xl animate-slide-up" style={{ animationDelay: '0.1s' }}>
-            Digital Marketing Agency for {county} Businesses
-          </p>
-          <p className="text-lg text-white/80 mb-12 max-w-3xl animate-slide-up" style={{ animationDelay: '0.2s' }}>
-            We help businesses throughout {county} dominate their local market. From Guildford to Woking, from Epsom to Leatherhead—we know your market and how to drive real growth.
-          </p>
-          <div className="flex gap-4 animate-slide-up" style={{ animationDelay: '0.3s' }}>
-            <Link href="/contact-us" className="btn bg-white text-primary-600 hover:bg-dark-100 text-lg">
-              Get Your Free Audit
-            </Link>
-            <a href="#services" className="btn border-2 border-white text-white hover:bg-white/10 text-lg">
-              See Our Services
-            </a>
-          </div>
-        </div>
-      </section>
+      <CountyHero county={county} lat={lat} lng={lng} />
 
       {/* Stats Section */}
       <section className="py-16 bg-dark-50">
